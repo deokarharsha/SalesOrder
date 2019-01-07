@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html ng-app="Main">
+<head>
+    <style>
+        .container{
+            margin-top: 100px;
+            width:600px;
+            height:500px;
+            background-color:lightgray;
+        }
+       
+    </style>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Sales Order</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+</head>
+<body ng-controller="MainCtrl">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="main.js"></script>
+    <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <span class="navbar-brand mb-0">Sales Order</span>
+            </nav><br>
+
+            <div class="row">   
+            <div class="col">
+                <label class="col-xl-6">Trans ID :</label><input class="col-xl-6" type="text" ng-model="Transid">
+                <label class="col-xl-6">Stock Location :</label><select class="col-xl-6"class="custom-select" ng-model="Stockloc">
+                        <option selected>Choose One...</option>
+                        <option value="1">Boots</option>
+                        <option value="2">Shoes</option>
+                        <option value="3">Feet</option>
+                        </select>
+                <label class="col-xl-6">Party Name :</label><input class="col-xl-6"type="text" ng-model="PartyNM">
+                <label class="col-xl-6">Order Booked By :</label><input class="col-xl-6"type="text" ng-model="OrderBookedBy">
+                <label class="col-xl-6">PO No:</label><input class="col-xl-6"type="text" ng-model="PONum">
+                <label class="col-xl-6">Delievery Date :</label><input class="col-xl-6"type="date" ng-model="DelDate">
+                <label class="col-xl-6">Way Bill No :</label><input class="col-xl-6"type="text" ng-model="WayBillNo">
+                <label class="col-xl-6">Discount Percent :</label><input class="col-xl-6"type="text" ng-model="DiscountPer">
+                <label class="col-xl-6">On Header :</label><select class="col-xl-6"class="custom-select" ng-model="OnHeader">
+                        <option selected>Choose One...</option>
+                        <option value="1">Boots</option>
+                        <option value="2">Shoes</option>
+                        <option value="3">Feet</option>
+                        </select>
+            </div>
+            
+            <div class="col">
+                <label class="col-xl-6">Trans Date :</label><input class="col-xl-6"type="date" ng-model="TransDate">
+                <label class="col-xl-6">Bill Date :</label><input class="col-xl-6"type="date" ng-model="BillDate">
+                <label class="col-xl-6">City :</label><input class="col-xl-6"type="text" ng-model="City">
+                <label class="col-xl-6">Sort By :</label><input class="col-xl-6"type="text"ng-model="SortBy">
+                <label class="col-xl-6">Packed By :</label><input class="col-xl-6"type="text"ng-model="PackedBy">
+                <label class="col-xl-6">Transporter :</label><input class="col-xl-6"type="text"ng-model="Transporter">
+                <label class="col-xl-6">Reference :</label><input class="col-xl-6"type="text"ng-model="Reference">
+                <label class="col-xl-6">Discount Amount :</label><input class="col-xl-6"type="text"ng-model="DiscountAmount">
+                <label class="col-xl-6">On Row :</label><select class="col-xl-6"class="custom-select"ng-model="OnRow">
+                        <option selected>Choose One...</option>
+                        <option value="1">Boots</option>
+                        <option value="2">Shoes</option>
+                        <option value="3">Feet</option>
+                        </select>
+            </div>
+            <div class="col">
+                <label class="col-xl-6">Ref Doc No :</label><input class="col-xl-6"type="text"ng-model="RefDocNo">
+                <label class="col-xl-6">Bill No:</label><input class="col-xl-6"type="text"ng-model="BillNo">
+                <label class="col-xl-6">Packed Date :</label><input class="col-xl-6"type="date"ng-model="PackedDate">
+                <label class="col-xl-6">Lr No :</label><input class="col-xl-6"type="text"ng-model="LrNo">
+                <label class="col-xl-6">Lr Date :</label><input class="col-xl-6"type="date"ng-model="LrDate">
+                <label class="col-xl-6">Case :</label><input class="col-xl-6"type="text"ng-model="Case">
+                <label class="col-xl-6">Forwarding :</label><input class="col-xl-6"type="text" ng-model="Forwarding">
+                <button class="col-xl-6" style="margin-left: 65px;">Comment</button>
+                <button class="col-xl-6" style="margin-left: 65px;" ngclick="submit()">Save</button>
+            </div>
+            
+            <table style="margin-top: 20px;margin-left: 25px;">
+                <tr><td><button>Add</button></td>
+                    <td><button>Remove</button></td>
+                    <td><label>Drum No :</label><input type="text"></td>
+                    <td><label>Barcode :</label><input type="text"></td>
+                    <td><label>Rate :</label><input type="text"></td>
+                    <td><label>Qty :</label><input type="text"></td></tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
